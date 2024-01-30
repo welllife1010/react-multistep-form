@@ -5,15 +5,11 @@ type AccountData = {
   password: string
 }
 
-type AccountDataProps = AccountData & {
+type AccountProps = AccountData & {
   updateFields: (fields: Partial<AccountData>) => void
 }
 
-export function AccountForm({
-  email,
-  password,
-  updateFields,
-}: AccountDataProps) {
+export function AccountForm({ email, password, updateFields }: AccountProps) {
   return (
     <FormWrapper title="Accont Creation">
       <label>Email</label>
